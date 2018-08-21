@@ -34,7 +34,7 @@ cd VisemeNet_tensorflow
 
 2) Build the container
 ```
-git clone https://github.com/yzhou359/VisemeNet_tensorflow.git
+git clone https://github.com/Pantsworth/VisemeNet_tensorflow.git
 cd VisemeNet_tensorflow/
 nvidia-docker build . --tag visemenet:latest
 ```

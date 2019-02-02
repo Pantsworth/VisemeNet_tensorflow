@@ -3,7 +3,11 @@
 ## Input/Output
 
 + Input audio needs to be 44.1kHz, 16-bit, WAV format
-+ Output visemes are applicable to the JALI-based face-rig, see [here](http://www.dgp.toronto.edu/~elf/jali.html)
++ Output visemes are applicable to the JALI-based face-rig, see [HERE](http://www.dgp.toronto.edu/~elf/jali.html)
+
+## JALI Viseme Annotation Dataset
+
++ BIWI dataset with well-annotated JALI viseme parameters. [[DATASET](https://www.dropbox.com/sh/oj13tvq9ggf2puz/AADBPyRUcyisFtKgCoDmNhLHa?dl=0)]   [[README](VisemeNet_Annotation_README.md)]
 
 ## Local Install
 1). **Ensure you have the following installed:**
@@ -47,7 +51,7 @@ nvidia-docker run -it -p 8888:8888 visemenet:latest bash
 ## Running Examples
 1). **Prepare data and model:**  
    * convert your test audio files into WAV format, put it to the directory data/test_audio/   
-   * download the latest model from [Here](https://www.dropbox.com/sh/7nbqgwv0zz8pbk9/AAAghy76GVYDLqPKdANcyDuba?dl=0), put all 4 files to data/ckpt/pretrain_biwi/  
+   * download the public face rig model from [HERE](https://www.dropbox.com/sh/7nbqgwv0zz8pbk9/AAAghy76GVYDLqPKdANcyDuba?dl=0), put all 4 files to data/ckpt/pretrain_biwi/  
 
 2). **Forward inference:**  
    * put your test audio file name in file 'main_test.py', line 7. 
@@ -63,4 +67,5 @@ python main_test.py
 3). **JALI animation in Maya:**
    * put your test audio file name in file 'maya_animation.py', line 4.
    * Then run 'maya_animation.py' in Maya with JALI environment to create talking face animation automatically. (If using different version of JALI face rig, the name of phoneme/co-articulation variable might varies.)
+   * UPDATE: 'maya_animation.py' has been updated with the [public face rig](http://www.dgp.toronto.edu/~elf/jali.html) annotations. Feel free to play with it!
 
